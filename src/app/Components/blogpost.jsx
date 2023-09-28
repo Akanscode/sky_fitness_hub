@@ -11,8 +11,8 @@ const BlogPost = () => {
   return (
       <div className='bg-status-stone-10 w-full'>
           <div className=' container mx-auto w-full'>
-              <div className=' relative py-16 md:py-20'>
-                  <div className='flex flex-row mt-10 overflow-hidden lg:justify-between'>
+              <div className='py-10'>
+                  <div className='flex flex-row  overflow-hidden lg:justify-between'>
                       <div className='mx-5'>
                           <h5 className="mb-2  text-status-purple-90">Blog</h5>
                           <h3 className="uppercase font-bold">recent blogpost</h3>
