@@ -16,42 +16,42 @@ import dynamic from 'next/dynamic';
 
 const CompandSeason = () => {
   const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
-     const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-        initialSlide: 0,
-       prevArrow: <PrevArrow/>,
-        nextArrow: <NextArrow />,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 640,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    prevArrow: <PrevArrow/>,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
         }
-      ]
-    };
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div className='bg-status-stone-10 w-full'>
       <div className=' container mx-auto w-full'>
@@ -75,8 +75,8 @@ const CompandSeason = () => {
           </div>
           <div className=' w-full mx-auto'>
             <Slider {...settings}>
-              {videoclasses.map((videoclass, id) => (
-                <div className='p-4' key={id}>
+              {videoclasses.map((videoclass) => (
+                <div className='p-4' key={videoclass.id}>
                   <div className='h-auto overflow-hidden hover:cursor-pointer'>
                     <div className='wrapper'>
                        <ReactPlayer url={videoclass.videocard} controls={true} loop={true}  playing={true} className="w-auto h-auto rounded-md shadow-lg" />

@@ -30,31 +30,28 @@ const BlogPost = () => {
                       </div>
                   </div>
                   <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 sm:max-w-sm sm:mx-auto md:max-w-full mt-2'>
-                      {blog.map((blogpost, id) => (
-                          <div className='' key={id}>
+                      {blog.map((blogpost) => (
+                          <div className='' key={blogpost.id}>
                               <Link href="#" className=''>
-                                  
-                                      <div className=' overflow-hidden border-2 border-gray-200 rounded-lg shadow-2xl border-opacity-60'>
-                                          <Image src={blogpost.blogimage} alt="blogimage" width={200} height={200} className="bject-cover object-center w-full rounded-b-full shadow-md lg:h-48 md:h-36 rounded-l-md" />
-                                          <div className='p-4'>
-                                              <h3 className='text-status-purple-50'> {blogpost.blogtitle}</h3>
-                                              <h4 className='text-gray-700 hover:text-blue-900 max-w-md'> {blogpost.blogsubtitle}</h4>
-                                              <p className='mb-2 leading-relaxed text-sm'> {blogpost.blogtext}</p>
-                                              <div className=' inline-flex items-center'>
-                                                  <Image src={blogpost.authorimage} alt="authorimage" width={30} height={30} className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
-                                                  <span className='pl-4 text-sm text-gray-900 font-extralight'> {blogpost.blogauthor }</span>
-                                              </div>   
+                                  <div className=' overflow-hidden border-2 border-gray-200 rounded-lg shadow-2xl border-opacity-60'>
+                                      <Image src={blogpost.blogimage} alt="blogimage" width={200} height={200} className="bject-cover object-center w-full rounded-b-full shadow-md lg:h-48 md:h-36 rounded-l-md" />
+                                      <div className='p-4'>
+                                          <h3 className='text-status-purple-50'> {blogpost.blogtitle}</h3>
+                                          <h4 className='text-gray-700 hover:text-blue-900 max-w-md'> {blogpost.blogsubtitle}</h4>
+                                          <p className='mb-2 leading-relaxed text-sm'> {blogpost.blogtext}</p>
+                                          <div className=' inline-flex items-center'>
+                                              <Image src={blogpost.authorimage} alt="authorimage" width={30} height={30} className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                                              <span className='pl-4 text-sm text-gray-900 font-extralight'> {blogpost.blogauthor}</span>
                                           </div>
                                       </div>
-                                  
+                                  </div>
                               </Link>
                           </div>
                       ))}
                   </div>
               </div>
           </div>
-    </div>
-  )
+      </div>
+    )
 }
-
 export default BlogPost

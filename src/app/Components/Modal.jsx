@@ -6,8 +6,7 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
     <ReactModal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-     
-      className="modal w-auto py-10 my-20  mx-auto max-w-2xl"
+      className="modal w-auto -z-50  my-20  mx-auto max-w-2xl"
     >
       {children}
     </ReactModal>

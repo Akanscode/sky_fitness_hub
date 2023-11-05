@@ -4,7 +4,8 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import {FaCaretUp, FaCaretDown} from "react-icons/fa"
 import Image from "next/image";
 import Link from "next/link";
-import LogIn from "./LoginAndSignUp/login";
+import LogIn from "@/app/(auth)/login/page";
+import SignUp from "@/app/(auth)/signup/page";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,9 +66,7 @@ const Navbar = () => {
               <LogIn/>
             </li>
             <li>
-              <Link href="/" className=" bg-status-purple-40 text-stone-100 font-medium rounded-md px-4 py-3">
-                Book a Class
-              </Link>
+              <SignUp/>
             </li>
           </ul>
           <div className="lg:hidden">
