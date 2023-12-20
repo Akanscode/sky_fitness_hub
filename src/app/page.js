@@ -1,28 +1,35 @@
 
-import Hero from "./Components/hero";
-import UpcomingClass from "./Components/upcomingclass";
-import FounderStory from "./Components/founderstory";
-import CompandSeason from "./Components/compandseason";
-import BlogPost from "./Components/blogpost";
+import React from "react";
+import Hero from "./Components/herosection";
+import UpcomingClass from "./Components/upcomingclasssection";
+import FounderStory from "./Components/founderstorysection";
+import CompandSeason from "./Components/compandsection";
+import BlogPost from "./Components/blogsection";
+import Cta from "./Components/cta";
+import Testimony from "./Components/testimony";
 
 
+ 
+export const metadata = {
+  title: 'sky fitness hub',
+}
 
 
 export default function Home() {
   return (
-    
     <>
-        <Hero />
+     <Hero /> 
       <UpcomingClass />
       <FounderStory />
       <CompandSeason/>
-      <BlogPost/>
-     </>
-      
-    
-      
+      <BlogPost />
+      <Cta />
+      <Testimony/>
+    </>
+  );
+}
+
       
       
    
-  )
-}
+  

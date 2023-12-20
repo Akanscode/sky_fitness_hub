@@ -21,3 +21,4 @@ const DashboardHero = () => {
 }
 
 export default DashboardHero
+DashboardHero.props = { protected: true };

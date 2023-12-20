@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -13,22 +14,26 @@ import { toast } from "react-toastify";
 
 const AuthContext = createContext();
 
+export const useAuth = () => {
+  return useContext(AuthContext);
+};
+
 export const AuthProvider  = ({ children }) => {
 
-   const [user, setUser] = useState(null);
+   const [user, setUser] = useState({});
 
 
   function signup(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
 
-  function signin(email, password) {
+  function login(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
     
   }
 
   function updateUser(username) {
-    return updateProfile(auth.currentUser, { displayName: username });
+    return updateProfile(auth, { displayName: username });
   }
 
   function signout() {
@@ -71,23 +76,17 @@ export const AuthProvider  = ({ children }) => {
       unsubscribe();
     };
   }, []);
+  const value = {
+    user,
+    signup,
+    updateUser,
+    login,
+    signout,
+    resetEmail,
+    upload,
+  };
 
-  return (
-    <AuthContext.Provider
-      value={{
-        user,
-        signup,
-        updateUser,
-        signin,
-        signout,
-        resetEmail,
-        upload,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
-export const useAuth = () => {
-  return useContext(AuthContext);
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+
+ 
 };

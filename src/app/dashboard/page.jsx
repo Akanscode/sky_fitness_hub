@@ -1,21 +1,24 @@
 'use client'
 import React from 'react'
-import ProtectedRoute from './ProtectedRoute'
+//import ProtectedRoute from '../Components/ProtectedRoute'
 import DashboardHero from './DashboardHero'
+import { AuthProvider } from '../context/UserAuth'
+//import DashboardLayout from './layout'
 
-import DashboardLayout from './DashboardLayout'
-const Profile = () => {
+const DashboardProfile = () => {
   return (
-    <ProtectedRoute>
-       <DashboardLayout>
-        <DashboardHero/>
-      </DashboardLayout>
-    </ProtectedRoute>
+    <AuthProvider>
+      <section className='dashboardprofile'>
+       <DashboardHero/>
+     </section>
      
-     
+    </AuthProvider>
+        
+      
+  
     
-    
+      
   )
 }
 
-export default Profile
+export default DashboardProfile

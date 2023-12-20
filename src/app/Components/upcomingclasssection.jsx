@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { upcomingclasses } from './Data';
 import { FaArrowRight } from "react-icons/fa"
 import Image from 'next/image';
-import { PrevArrow, NextArrow } from './ArrowComponent';
+import { PrevArrow, NextArrow } from '../lib/CustomsArrowslider';
 
 
 
@@ -48,7 +48,7 @@ const UpcomingClass = () => {
         ]
     };
     return (
-        <div className=' bg-status-stone-10 w-full'>
+        <div className=' bg-status-stone-10/5 w-full'>
             <div className='container mx-auto w-full'>
                 <div className='py-16 md:py-20'>
                     <div className="flex flex-col items-center sm:max-auto">

@@ -1,7 +1,7 @@
-'use client'
+{/*'use client'
 import { useState } from 'react';
-import Modal from '@/app/Components/Modal';
-import LoginForm from '@/app/Components/LoginForm';
+import Modal from '@/app/lib/Modal';
+import LoginForm from '@/app/auth/signin/Login';
 import {AiOutlineClose} from "react-icons/ai"
 
 const LogIn = () => {
@@ -29,4 +29,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default LogIn;*/}

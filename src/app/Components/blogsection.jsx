@@ -9,9 +9,9 @@ import Image from 'next/image'
 
 const BlogPost = () => {
   return (
-      <div className='bg-status-stone-10 w-full'>
+      <div className='bg-status-stone-10/5 w-full'>
           <div className=' container mx-auto w-full'>
-              <div className='py-10'>
+              <div className='py-5'>
                   <div className='flex flex-row  overflow-hidden lg:justify-between'>
                       <div className='mx-5'>
                           <h5 className="mb-2  text-status-purple-90">Blog</h5>

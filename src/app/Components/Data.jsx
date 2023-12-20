@@ -126,5 +126,131 @@ export const blog = [
 }
  ]
          
+export const privateclasses = [
+    {
+       id: 1,
+        postimage: "/assets/dancingstepimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
 
+    },
+     {
+       id: 2,
+        postimage: "/assets/balletimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    },
+      {
+       id: 3,
+        postimage: "/assets/dancingstepimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    },
+       {
+       id: 4,
+        postimage: "/assets/zumbaimg2.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    }
+]
+
+export const groupclasses = [
+    {
+       id: 1,
+        postimage: "/assets/dancingstepimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    },
+     {
+       id: 2,
+        postimage: "/assets/balletimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    },
+      {
+       id: 3,
+        postimage: "/assets/dancingstepimage.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    },
+       {
+       id: 4,
+        postimage: "/assets/zumbaimg2.jpg",
+        mins:"30mins",
+        timeandday: "Sunday 8:00pm",
+        price: "$50",
+        title: "Dacing Steps",
+        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt praesentium sequi modi quae aliquam ut corporis quo doloremque libero deleniti?",
+        instructorimage: "/assets/coverimage3.jpeg",
+        instructorname:"Mary Cool",
+
+    }
+]
     
+export const testimonials = [
+    {
+        id: 1,
+        coverimage: "/assets/coverimage1.webp",
+        text: "Retro helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware",
+        customername: "HOLDEN CAULFIELD",
+        customertitle:"CEO Apex.ng"
+
+    },
+     {
+        id: 2,
+        coverimage:  "/assets/coverimage3.jpeg",
+        text: "Retro helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware",
+        customername: "HOLDEN CAULFIELD",
+        customertitle:"Director A&Q Oil"
+
+    },
+      {
+        id: 3,
+        coverimage: "/assets/coverimage1.webp",
+        text: "Retro helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware",
+        customername: "HOLDEN CAULFIELD",
+        customertitle:"Snr. Developer "
+
+    }
+]

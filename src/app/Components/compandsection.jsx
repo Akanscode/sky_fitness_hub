@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import ReactPlayer from 'react-player'
-import { PrevArrow, NextArrow } from './ArrowComponent';
+import { PrevArrow, NextArrow } from '../lib/CustomsArrowslider';
 import { videoclasses } from './Data';
 import Slider from 'react-slick';
 import Link from 'next/link';
@@ -53,9 +53,9 @@ const CompandSeason = () => {
     ]
   };
   return (
-    <div className='bg-status-stone-10 w-full'>
+    <div className='bg-status-stone-10/5 w-full'>
       <div className=' container mx-auto w-full'>
-        <div className='py-10'>
+        <div>
           <div className="flex flex-row justify-between">
             <div className="mx-5">
               <h5 className="mb-2 text-status-purple-90">Video Classes</h5>

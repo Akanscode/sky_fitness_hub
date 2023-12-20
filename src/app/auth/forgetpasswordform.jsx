@@ -1,13 +1,8 @@
-
-import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '@/app/firebase';
-
-import { toast } from 'react-toastify';
-import Loader from './Loader';
+'use client'
+import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { useRouter } from 'next/navigation';
-
 import { HiEnvelope } from "react-icons/hi2"
+import * as Yup from 'yup';
 
 const ForgetPasswordSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -15,40 +10,28 @@ const ForgetPasswordSchema = Yup.object().shape({
 });
 
 const ForgetPasswordForm = ({ 
-     isLoading,
-    setIsLoading,
+    onSubmit
 }) => {
-     const router = useRouter();
-    
-    const handleResetPassword = async (values) => {
-        const { email } = values;
-        setIsLoading(true);
-        try {
-            await sendPasswordResetEmail( auth,  email);
-            setIsLoading(false);
-            router.push("/signin")
-            toast.success("Password Reset successful");
-        
-        } catch (error) {
-            setIsLoading(false);
-            toast.error(error.message);
-        }
-    }
-   
+    const [localState, setLocalState] = useState({ email: '' });
+     const [loading, setLoading] = useState(false);
+    const handleSubmit = (values) => {
+         setLoading(true);
+    setLocalState({ email: '' });
+    onSubmit(values);
+  };
+
     return (
         <>
-            {isLoading && <Loader />}
+           
             <div className='w-full max-w-md   p-8 space-y-3 rounded-xl bg-white '>
                 <h3 className='mb-3 text-center text-stone-800 capitalize'>Forgot Password ?</h3>
                 <div className="text-sm text-center text-stone-600 capitalize">
                     You Will Be Sent A Verification Link To Verify Your Password
                 </div>
                 <Formik
-                    initialValues={{
-                        email: '',
-                    }}
-                    validationSchema={ForgetPasswordSchema}
-                    onSubmit={handleResetPassword}
+                    initialValues={localState}
+                    onSubmit={handleSubmit}
+                    validationSchema={ForgetPasswordSchema} 
                 >
                     <Form className='space-y-2'>
                         <div>
@@ -59,7 +42,7 @@ const ForgetPasswordForm = ({
                             </div>
                             <ErrorMessage name="email" component="div" className="text-red-500 font-normal text-sm" />
                         </div>
-                        <button type="submit" className='w-full py-4 bg-status-purple-60 hover:bg-status-purple-70 rounded-md text-md font-bold text-status-stone-20 transition duration-200'>Verify Now</button>
+                        <button type="submit" className={`w-full py-4 bg-status-purple-60 hover:bg-status-purple-70 rounded-md text-md font-bold text-status-stone-30 transition duration-200 ${ loading ? " bg-opacity-50" : ""}`}>Verify Now</button>
                     </Form>
                 </Formik>
             </div>
