@@ -7,14 +7,9 @@ import CompandSeason from "./Components/compandsection";
 import BlogPost from "./Components/blogsection";
 import Cta from "./Components/cta";
 import Testimony from "./Components/testimony";
-
-
- 
 export const metadata = {
   title: 'sky fitness hub',
 }
-
-
 export default function Home() {
   return (
     <>

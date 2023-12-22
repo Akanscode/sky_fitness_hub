@@ -2,7 +2,7 @@ import React from 'react'
 import DashboardHeader from './DashboardHeader'
 import DashboardSideBar from './dashboardsidebar'
 
-const DashboardPage = () => {
+const DashboardPageHeader = () => {
   return (
       <div>
           <DashboardHeader />
@@ -11,4 +11,4 @@ const DashboardPage = () => {
 )
 }
 
-export default DashboardPage
+export default DashboardPageHeader

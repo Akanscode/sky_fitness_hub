@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 //import ProtectedRoute from '../Components/ProtectedRoute'
-import DashboardHero from './DashboardHero'
+import DashboardHero from './dashboardhero'
 import { AuthProvider } from '../context/UserAuth'
 //import DashboardLayout from './layout'
 
