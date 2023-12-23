@@ -6,9 +6,9 @@ import Loader from '../lib/Loader';
 //import Link from 'next/link';
 import ModalComponent from '../lib/Modal';
 import { useRouter } from 'next/navigation';
-import LoginForm from './signinform';
-import SignUpForm from './registerform';
-import ForgetPasswordForm from './forgetpasswordform';
+import LoginForm from './SigninForm';
+import SignUpForm from './RegisterForm';
+import ForgetPasswordForm from './ForgetPasswordForm';
 
 //reducer for Formreducer
 

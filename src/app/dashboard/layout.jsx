@@ -1,14 +1,16 @@
 //import DashboardHeader from "./dashboardsidebar/dashboardheader";
 
-import DashboardPageHeader from "./dashboardsidebar/dashboardpage";
+;
 import DashboardFooter from "./footer";
-//import DashboardFooter from "./dashboardfooter";
-//import { AuthProvider } from "../context/UserAuth";
-export default function DashboardLayout({children,}) { 
+import DashboardHeader from "./dashboardheader";
+import DashboardSideBar from "./dashboardsidebar";
+export default  function DashboardLayout({ children, }) { 
+  
+  
   return (
     <section className="dashboard">
-
-      <DashboardPageHeader />
+      <DashboardHeader/>
+      <DashboardSideBar/>
       <main> {children}</main>
       <DashboardFooter />
     </section>   

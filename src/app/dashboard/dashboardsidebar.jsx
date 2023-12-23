@@ -30,7 +30,7 @@ const DashboardSideBar = () => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-status-purple-50">
-          <ul className="space-y-2 font-medium">
+          <ul className="space-y-2 font-medium pt-20">
             <li>
               <div className="flex items-center p-2 text-white  bg-status-purple-80 rounded-full shadow-lg  hover:bg-status-purple-100  group">
                 <HiChartPie className='w-5 h-5 text-white transition duration-75' />
@@ -39,9 +39,9 @@ const DashboardSideBar = () => {
             </li>
             <li>
               <Link href="#"
-                className="flex items-center p-2 text-status-stone-90 rounded-lg  group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg  group"
               >
-                <HiOutlineHome className='flex-shrink-0 w-5 h-5 text-white transition duration-75' />
+                <HiOutlineHome className='flex-shrink-0 w-5 h-5 ' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Home</span>
               </Link>
             </li>

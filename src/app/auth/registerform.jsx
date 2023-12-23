@@ -9,7 +9,7 @@ import {
     HiEnvelope,
     HiUser
  } from "react-icons/hi2"
-import LoginForm from './signinform';
+import LoginForm from './SigninForm';
 
 const SignUpSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),

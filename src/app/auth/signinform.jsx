@@ -8,8 +8,8 @@ import {
     HiEyeSlash,
     HiEnvelope
  } from "react-icons/hi2"
-import SignUpForm from './registerform';
-import ForgetPasswordForm from './forgetpasswordform';
+import SignUpForm from './RegisterForm';
+import ForgetPasswordForm from './ForgetPasswordForm';
 // form validation using formmil
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
